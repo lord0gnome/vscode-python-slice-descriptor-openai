@@ -6,6 +6,11 @@ A simple vscode extension that provides textual descriptions for the user of the
 
 - `vscode > 1.68.0`
 
+
+## Example
+
+![Example](./images/example.gif)
+
 ## Extension Settings
 
 Will automatically be prompted and stored in vscode SecretStorage:
