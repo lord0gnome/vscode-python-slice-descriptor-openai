@@ -6,6 +6,10 @@
 - Ability to change `apiKey` after initial setting
 - Ability to change `model` after initial setting
 
+### 1.0.1
+
+- Modified activation constraints to *
+
 ### 1.0.0
 
 - Hover over a line to see the `textual description` of a slice contained within.

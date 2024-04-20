@@ -13,7 +13,7 @@
     "openAI"
   ],
   "icon": "images/favicon.ico",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/lord0gnome/vscode-python-slice-descriptor-openai",
   "galleryBanner": {
     "color": "#FAF9F1",

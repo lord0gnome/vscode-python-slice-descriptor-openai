@@ -31,6 +31,11 @@ Will automatically be prompted and stored in vscode SecretStorage:
 - apiKey selection at start through vscode QuickSelect
 - Simple language detection using vscode.env.language in the openAI prompt
 
+### 1.0.1
+
+- Modified activation constraints to *
+
+
 ### 1.1.0 (planned)
 - Shorter prompt to openAI, or usage of the assistant API perhaps
 - models and pricing pulled from an official/unofficial API
