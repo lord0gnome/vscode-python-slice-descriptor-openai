@@ -3,8 +3,6 @@
 ### 1.1.0 (planned)
 - Shorter prompt to openAI, or usage of the assistant API perhaps
 - models and pricing pulled from an official/unofficial API
-- Ability to change `apiKey` after initial setting
-- Ability to change `model` after initial setting
 
 ### 1.0.3
 
