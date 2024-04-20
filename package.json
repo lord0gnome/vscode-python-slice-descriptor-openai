@@ -13,7 +13,7 @@
     "openAI"
   ],
   "icon": "images/favicon.ico",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "https://github.com/lord0gnome/vscode-python-slice-descriptor-openai",
   "galleryBanner": {
     "color": "#FAF9F1",
@@ -30,22 +30,19 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [],
+    "commands": [
+      {
+        "command": "vscode-python-slice-descriptor-openai.setApiKeyCommand",
+        "title": "Python Slice Descriptor: Set OpenAI API Key"
+      },
+      {
+        "command": "vscode-python-slice-descriptor-openai.setModelCommand",
+        "title": "Python Slice Descriptor: Set OpenAI Model"
+      }
+    ],
     "configuration": {
       "type": "object",
-      "title": "Python Array Slice Descriptor Settings",
-      "properties": {
-        "vscode-python-slice-descriptor-openai.apiKey": {
-          "type": "string",
-          "default": "",
-          "description": "API key for OpenAI"
-        },
-        "vscode-python-slice-descriptor-openai.model": {
-          "type": "string",
-          "default": "",
-          "description": "Model to use for OpenAI"
-        }
-      }
+      "title": "Python Array Slice Descriptor Settings"
     }
   },
   "scripts": {

@@ -17,6 +17,9 @@ Will automatically be prompted and stored in vscode SecretStorage:
 - `apiKey` : Your openAI api key
 - `model` : The model to use
 
+You can run a command to set these using the `vscode commande pallette (ctrl+shift+p)`:
+- Python Slice Descriptor: Set OpenAI API Key
+- Python Slice Descriptor: Set OpenAI Model
 ## Known Issues
 
 - The openAI models I list are hard-coded, and the pricing is taken by hand off the openAI website.

@@ -14,8 +14,10 @@ async function sendPromptToOpenAI(extensionContext, systemPrompt, userPrompt) {
       model: model.name,
       max_tokens: 50,
     });
-
-    return `${completion.choices[0].message.content} - $${calculateCost(model.name, completion.usage.prompt_tokens, completion.usage.completion_tokens)}`; // This contains the response from the API
+    const currentOperationCost = calculateCost(model.name, completion.usage.prompt_tokens, completion.usage.completion_tokens)
+    const currentTotal = Number(extensionContext.globalState.get("totalCost", "0")) + Number(currentOperationCost)
+    extensionContext.globalState.update("totalCost", Number(currentTotal))
+    return `${completion.choices[0].message.content}\n\n$: ${currentOperationCost}\n\nModel: ${model.name}\n\nTotal $: ${currentTotal}`; // This contains the response from the API
   } catch (error) {
     outputChannel.appendLine(`Error calling OpenAI:, ${error}`);
   }
@@ -45,10 +47,17 @@ async function describeSlice(context, line) {
 }
 
 
-
+// test
 async function activate(context) {
 	outputChannel.appendLine("python-array-slice-descriptor Activated")
 	outputChannel.show()
+  vscode.commands.registerCommand("vscode-python-slice-descriptor-openai.setApiKeyCommand", () => {
+    promptForApiKey(context)
+  })
+  
+  vscode.commands.registerCommand("vscode-python-slice-descriptor-openai.setModelCommand", () => {
+    promptForModel(context)
+  })
   await getApiKey(context);
   await getModel(context);
   const hoverProvider = {

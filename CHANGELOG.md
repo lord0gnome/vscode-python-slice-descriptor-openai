@@ -6,6 +6,13 @@
 - Ability to change `apiKey` after initial setting
 - Ability to change `model` after initial setting
 
+### 1.0.3
+
+- Can change model and apikey using command pallette
+- Included current total cost in tooltip
+- Included current Model in tooltip
+
+
 ### 1.0.2
 
 - Modified activation constraints back to python language
