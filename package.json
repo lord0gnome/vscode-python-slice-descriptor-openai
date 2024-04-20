@@ -13,7 +13,7 @@
     "openAI"
   ],
   "icon": "images/favicon.ico",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/lord0gnome/vscode-python-slice-descriptor-openai",
   "galleryBanner": {
     "color": "#FAF9F1",
@@ -26,9 +26,9 @@
     "Visualization"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:python"
   ],
-  "main": "./extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [],
     "configuration": {
@@ -69,6 +69,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "openai": "^4.37.1"
+    "openai": "^4.38.2"
   }
 }

@@ -6,6 +6,11 @@
 - Ability to change `apiKey` after initial setting
 - Ability to change `model` after initial setting
 
+### 1.0.2
+
+- Modified activation constraints back to python language
+- changed packaging logic to include node_modules
+
 ### 1.0.1
 
 - Modified activation constraints to *

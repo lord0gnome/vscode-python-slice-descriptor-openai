@@ -22,26 +22,10 @@ Will automatically be prompted and stored in vscode SecretStorage:
 - The openAI models I list are hard-coded, and the pricing is taken by hand off the openAI website.
 - If you hover over any line with a slice python array, you will **PAY** with your openAI account, be weary of this.
 
-## Release Notes
 
-### 1.0.0
+#### Changelog
 
-- Hover over a line to see the `textual description` of a slice contained within.
-- Model selection at start through vscode Input
-- apiKey selection at start through vscode QuickSelect
-- Simple language detection using vscode.env.language in the openAI prompt
-
-### 1.0.1
-
-- Modified activation constraints to *
-
-
-### 1.1.0 (planned)
-- Shorter prompt to openAI, or usage of the assistant API perhaps
-- models and pricing pulled from an official/unofficial API
-- Ability to change `apiKey` after initial setting
-- Ability to change `model` after initial setting
-
+View it [here](./CHANGELOG.md)
 
 **Enjoy!**
 This is my first published extension, any comments will be appreciated, even very negative ones. ;)
