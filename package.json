@@ -1,0 +1,52 @@
+{
+  "name": "vscode-python-slice-descriptor-openai",
+  "displayName": "Python Array Slice Descriptor",
+  "description": "This extension provides a textual description, and the price of the openAI request, when you hover over a slice shorthand of a python array.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [],
+    "configuration": {
+      "type": "object",
+      "title": "Python Array Slice Descriptor Settings",
+      "properties": {
+        "vscode-python-slice-descriptor-openai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API key for OpenAI"
+        },
+        "vscode-python-slice-descriptor-openai.model": {
+          "type": "string",
+          "default": "",
+          "description": "Model to use for OpenAI"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.68.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "openai": "^4.37.1"
+  }
+}
