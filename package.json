@@ -2,8 +2,23 @@
   "name": "vscode-python-slice-descriptor-openai",
   "displayName": "Python Array Slice Descriptor",
   "description": "This extension provides a textual description, and the price of the openAI request, when you hover over a slice shorthand of a python array.",
+  "author": "Guillaume RICHARD",
+  "publisher": "guillaumerichard",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "keywords": [
+    "describe",
+    "python",
+    "slice",
+    "shorthand",
+    "openAI"
+  ],
+  "icon": "images/favicon.ico",
   "version": "1.0.0",
   "repository": "https://github.com/lord0gnome/vscode-python-slice-descriptor-openai",
+  "galleryBanner": {
+    "color": "#FAF9F1",
+    "theme": "light"
+  },
   "engines": {
     "vscode": "^1.68.0"
   },
@@ -11,7 +26,7 @@
     "Visualization"
   ],
   "activationEvents": [
-    "onLanguage:python"
+    "*"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -36,7 +51,12 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./extension.js --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
@@ -44,6 +64,7 @@
     "@types/vscode": "^1.68.0",
     "@vscode/test-cli": "^0.0.8",
     "@vscode/test-electron": "^2.3.9",
+    "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3"
   },

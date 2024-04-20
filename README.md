@@ -1,4 +1,4 @@
-# python-array-slice-descriptor
+# Vscode Python Slice Descriptor Openai
 
 A simple vscode extension that provides textual descriptions for the user of the currently hovered line if it contains a python slice.
 
