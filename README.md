@@ -2,6 +2,8 @@
 
 A simple vscode extension that provides textual descriptions for the user of the currently hovered line if it contains a python slice.
 
+[VSCode Marketplace Page](https://marketplace.visualstudio.com/items?itemName=guillaumerichard.vscode-python-slice-descriptor-openai)
+
 ## Requirements
 
 - `vscode > 1.68.0`
@@ -17,7 +19,7 @@ Will automatically be prompted and stored in vscode SecretStorage:
 - `apiKey` : Your openAI api key
 - `model` : The model to use
 
-You can run a command to set these using the `vscode commande pallette (ctrl+shift+p)`:
+You can run a command to set these using the `vscode command pallette (ctrl+shift+p)`:
 - Python Slice Descriptor: Set OpenAI API Key
 - Python Slice Descriptor: Set OpenAI Model
 ## Known Issues
